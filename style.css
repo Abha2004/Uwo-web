@@ -1,0 +1,2212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* ================= NAVBAR ================= */
+/* ================= OUR PROJECTS DROPDOWN (FINAL FIX) ================= */
+
+.projects-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* main nav text */
+.projects-link {
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  padding: 6px 0;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* small lift on hover */
+.projects-dropdown:hover .projects-link {
+  transform: translateY(-2px);
+}
+
+/* dropdown box */
+.projects-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #162836;
+  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* dropdown links */
+.projects-menu a {
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* hover effect on items */
+.projects-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* show dropdown on hover (DESKTOP) */
+.projects-dropdown:hover .projects-menu {
+  display: block;
+}
+
+/* ================= MOBILE SUPPORT ================= */
+
+@media (max-width: 768px) {
+  .projects-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 8px;
+  }
+}
+
+.navbar {
+  background: #ffffff;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 78px;
+  cursor: pointer;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 40, 80, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: auto;
+  padding: 160px 24px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 24px;
+  font-size: 20px;
+  color: #e6e6e6;
+}
+
+/* ================= HOME HERO CTA (ORIGINAL STYLE) ================= */
+
+.home-cta-wrapper {
+  margin-top: 44px;
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-cta {
+  padding: 16px 40px;
+  border-radius: 999px;
+  background: #D6A559;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  transition: all 0.25s ease;
+}
+
+.home-cta:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* outline CTA (if needed) */
+.home-cta.outline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.section.dark {
+  background: rgba(22,40,54,0.85);
+}
+
+.section.light {
+  background: rgba(58,95,120,0.65);
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+.section p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* ================= CARDS ================= */
+.cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+ 
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ================= CONTACT FORM ================= */
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin: 8px 0 20px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.form-button {
+  width: 100%;
+  padding: 14px;
+  background: #D6A559;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #223E52;
+  padding: 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+}
+
+.social-links {
+  margin-top: 12px;
+}
+
+.social-links img {
+  width: 36px;
+  height: 36px;
+  margin: 0 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+
+/* ================= DROPDOWN ================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  font-weight: 700;
+  color: #000;
+  padding: 8px 0;
+}
+
+/* Dropdown box */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 14px 20px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f4f8;
+}
+
+/* Hover open */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Animate trigger slightly */
+.nav-dropdown:hover .dropdown-trigger {
+  transform: translateY(-2px);
+}
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-weight: 700;
+  color: #000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  padding: 14px 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+.mobile-dropdown {
+  margin-top: 12px;
+}
+
+.mobile-dropdown-toggle {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  margin-top: 8px;
+  padding-left: 10px;
+}
+
+.mobile-dropdown-menu a {
+  display: block;
+  margin: 8px 0;
+}
+/* ===== DESKTOP DROPDOWN ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 2000;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.dropdown-menu span:hover {
+  background: #f2f4f8;
+}
+
+/* Hover open */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== MOBILE DROPDOWN ===== */
+.mobile-projects {
+  margin: 12px 0;
+}
+
+#mobileProjectsMenu {
+  display: none;
+  margin-left: 12px;
+}
+
+#mobileProjectsMenu span {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+}
+/* ===== OUR PROJECTS DROPDOWN ===== */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .nav-link {
+  cursor: pointer;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown .arrow {
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 2000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f4f7;
+}
+
+/* DESKTOP HOVER */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* ===== MOBILE SUPPORT ===== */
+@media (max-width: 768px) {
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    padding-left: 12px;
+  }
+
+  .nav-dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
+/* ===== DESKTOP DROPDOWN ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 2000;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.dropdown-menu span:hover {
+  background: #f2f4f8;
+}
+
+/* Hover open */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== MOBILE DROPDOWN ===== */
+.mobile-projects {
+  margin: 12px 0;
+}
+
+#mobileProjectsMenu {
+  display: none;
+  margin-left: 12px;
+}
+
+#mobileProjectsMenu span {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+}
+/* ================= DROPDOWN ================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 140%;
+  right: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 14px 20px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* SHOW ON HOVER (DESKTOP) */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ================= MOBILE ================= */
+
+.mobile-submenu {
+  display: none;
+  padding-left: 12px;
+}
+
+.mobile-submenu a {
+  display: block;
+  margin: 8px 0;
+}
+.enquiry-section {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ================= ENQUIRY TYPE (CONTACT PAGE FIX) ================= */
+
+.section.light {
+  background: #ffffff;   /* white background */
+  color: #000000;   
+  font-weight: 400;     /* black text */
+}
+
+.section.light h2,
+.section.light p {
+  color: #000000;
+}
+
+.section.light .card {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+/* ================= ENQUIRY SECTION FIX ================= */
+
+.enquiry-section {
+  background: #ffffff !important;
+  color: #000000;
+}
+
+.enquiry-section h2 {
+  color: #000000;
+}
+
+/* Enquiry cards */
+.enquiry-card {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;              /* 🔥 BOLD TEXT */
+  border: 2px solid #000000;     /* 🔲 BORDER */
+  border-radius: 12px;
+  padding: 22px;
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+/* Optional subtle hover (professional feel) */
+.enquiry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* CONTACT PAGE HERO ONLY */
+.contact-hero {
+  min-height: 60vh;   /* pehle 100vh tha, ab kam */
+}
+
+.contact-hero .hero-content {
+  padding: 100px 24px;  /* upar-neeche ka space kam */
+}
+/* OUR PROJECTS DROPDOWN */
+.projects-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.projects-link {
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+/* hover animation on tab */
+.projects-dropdown:hover .projects-link {
+  transform: translateY(-2px);
+}
+
+/* dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #162836;
+  border-radius: 12px;
+  min-width: 180px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* dropdown links */
+.dropdown-menu a {
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* show dropdown on hover */
+.projects-dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* MOBILE PROJECTS DROPDOWN */
+.mobile-projects {
+  display: none;
+  padding-left: 16px;
+}
+
+.mobile-projects a {
+  display: block;
+  margin: 8px 0;
+  font-weight: 600;
+}
+/* ================= OUR TEAM PAGE ================= */
+
+.team-section {
+  width: 100%;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.team-section.blue {
+  background: #162377;
+  color: #ffffff;
+}
+
+.team-section.white {
+  background: #ffffff;
+  color: #000000;
+}
+
+.team-section h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.team-image {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.team-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Section 2 layout */
+.team-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  text-align: left;
+}
+
+.team-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.team-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-text h2 {
+    font-size: 30px;
+  }
+}
+/* OUR PROJECTS DROPDOWN */
+.projects-dropdown {
+  position: relative;
+}
+
+.projects-link {
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+
+.projects-dropdown:hover .projects-link {
+  transform: translateY(-2px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #162836;
+  border-radius: 10px;
+  min-width: 160px;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,.12);
+}
+
+.projects-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* MOBILE */
+.mobile-drawer {
+  position: fixed;
+  right: -100%;
+  top: 90px;
+  width: 240px;
+  background: #fff;
+  padding: 20px;
+  transition: right .3s ease;
+  z-index: 1000;
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-projects {
+  display: none;
+  padding-left: 10px;
+}
+
+.mobile-projects a {
+  display: block;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+/* ================= FLAGSHIP WHITE SECTION ================= */
+
+.flagship-white {
+  background: #ffffff;
+  color: #000000;
+}
+
+.flagship-white .section-title {
+  color: #000000;
+}
+
+.flagship-white p {
+  color: #222222;
+}
+
+/* Cards inside flagship */
+.flagship-card {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.flagship-card h3 {
+  color: #000000;
+}
+
+.flagship-card p {
+  color: #333333;
+}
+
+/* Hover effect (professional, subtle) */
+.flagship-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+/* ================= FORCE BLACK BG + WHITE TEXT ================= */
+
+/* REMOVE NUMBERS FROM ORDERED LIST */
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ol li {
+  margin: 8px 0;
+}
+.section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 24px;
+}
+
+.section ul li {
+  margin: 8px 0;
+  color: #ffffff;
+}
+/* ===== FLAGSHIP CARDS FIX ===== */
+
+.flagship-card {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ICON IMAGE */
+.flagship-icon {
+  width: 100%;
+  max-width: 220px;     /* web me control */
+  height: auto;         /* 🔥 CUT BAND */
+  object-fit: contain;  /* 🔥 FULL IMAGE ALWAYS */
+  margin: 0 auto 20px;
+  display: block;
+}
+/* ================= FLAGSHIP CARD ================= */
+
+.flagship-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  /* 🔥 WIDTH CONTROL (MAIN FIX) */
+  max-width: 420px;      /* desktop width control */
+  width: 100%;
+  margin: 0 auto;
+
+  /* text safety */
+  overflow: hidden;
+}
+
+/* ================= ICON IMAGE ================= */
+
+.flagship-card img {
+  width: 100%;
+  max-width: 260px;     /* 🔥 icon thoda compact */
+  height: auto;
+  object-fit: contain; /* ❌ no crop */
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* ================= TITLE ================= */
+
+.flagship-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0 10px;
+  color: #000000;
+  word-wrap: break-word;
+}
+
+/* ================= TEXT ================= */
+
+.flagship-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+
+  /* 🔥 text ko card ke andar hi rakhega */
+  max-width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+/* ================= DESKTOP LAYOUT FIX ================= */
+
+.cards {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* ================= MOBILE FIX ================= */
+
+
+
+/* ================= FLAGSHIP PROJECT ICON FIX ================= */
+
+.flagship-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ICON IMAGE */
+.flagship-card img {
+  width: auto ;
+  max-width: 220px;     /* desktop control */
+  height: auto;         /* 🔥 NO FIXED HEIGHT */
+  object-fit: contain;  /* 🔥 NO CROPPING */
+  margin: 0 auto 22px;
+  display: block;
+}
+
+/* TITLE */
+.flagship-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* TEXT */
+.flagship-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* ================= MOBILE FIX ================= */
+
+
+/* ===== RESPONSIVE (MOBILE + WEB SAME) ===== */
+@media (max-width: 768px) {
+  .flagship-icon {
+    max-width: 180px;
+  }
+}
+.start-project-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 34px;
+  background: #25D366;          /* WhatsApp green */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.start-project-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.3);
+}
+/* ================= VISION & MISSION CARDS ================= */
+
+.vision-mission-section {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.vision-mission-section .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #000000;
+}
+
+/* CARD WRAPPER */
+.vision-mission-cards {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* INDIVIDUAL CARD */
+.vm-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 50px 40px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 260px;   /* 🔥 SAME HEIGHT FOR BOTH */
+}
+
+/* CARD TITLE */
+.vm-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* CARD TEXT */
+.vm-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .vision-mission-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .vm-card {
+    min-height: auto;
+  }
+}
+/* ================= VISION & MISSION CARDS ================= */
+
+.vision-mission-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.vm-card {
+  background: #ffffff;
+  color: #000000;
+  width: 360px;
+  min-height: 420px;               /* 🔥 SAME HEIGHT */
+  padding: 36px 28px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE */
+.vm-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+/* TITLE */
+.vm-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.vm-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* 🔥 HOVER ANIMATION */
+.vm-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.25);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .vm-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+/* ABOUT PAGE HERO ONLY */
+.about-hero {
+  min-height: 65vh;     /* perfect balance */
+}
+
+.about-hero .hero-content {
+  padding: 110px 24px; /* upar-niche spacing kam */
+}
+/* FULL SCREEN TEAM IMAGE */
+
+.team-section blue{
+  margin: 0px;
+  padding-top: 90px;
+  width: 4px;;
+  height: auto;
+}
+.team-image{
+   margin-top: 0 ;
+  padding-top: 90px;
+}
+.team-fullscreen {
+  width: 100%;
+  height: 84vh;              /* full screen height */
+  overflow: hidden;
+  background: #2F3FAB
+}
+
+.team-fullscreen img {
+  width: 300;
+  height: 200%;
+  object-fit: contain;        /* 🔥 image cut nahi hogi */
+  display: block;
+  background: white       /* white background */
+}
+/* ================= SECTION 2 LAYOUT ================= */
+
+.section-two {
+  padding: 80px 6%;
+}
+
+.section-two-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.section-two-content {
+  flex: 1;
+  color: #ffffff;
+}
+
+.section-two-content h2,
+.section-two-content h3,
+.section-two-content h4 {
+  color: #ffffff;
+}
+
+.section-two-content p,
+.section-two-content li {
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+/* REMOVE BULLETS */
+.section-two-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* RIGHT IMAGE */
+.section-two-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-two-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= MOBILE ================= */
+
+/* ================= SECTION 2 BACKGROUND IMAGE ================= */
+
+.section-two-bg {
+  background-image: url("images/robot.png"); /* 👈 your image path */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  background-color:white ;/* Dark background */
+  padding: 120px 8%;
+}
+
+/* Text wrapper */
+.section-two-content {
+  max-width: 50%;
+  color: #ffffff;
+}
+
+/* Headings */
+.section-two-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Paragraph */
+.section-two-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+/* ================= MOBILE FIX ================= */
+
+/* ================= HOME PAGE SECTION 2 BACKGROUND ================= */
+
+.section-two-bg {
+  background-image: url("images/robot.png"); /* 🔥 image path */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  background-color: #000000;  /* black base */
+  padding: 120px 8%;
+}
+
+/* LEFT CONTENT */
+.section-two-content {
+  max-width: 52%;
+  color: #ffffff;
+}
+
+/* HEADINGS */
+.section-two-content h2 {
+  font-size: 36px;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+.section-two-content h3 {
+  margin-top: 50px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.section-two-content h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+/* TEXT */
+.section-two-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-top: 14px;
+}
+
+/* LIST */
+.section-two-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 18px;
+}
+
+.section-two-content ul li {
+  margin: 8px 0;
+  color: #ffffff;
+}
+
+/* ================= MOBILE FIX ================= */
+
+
+
+/* ================= SECTION 2 FULL BACKGROUND ================= */
+
+.section-two-bg {
+  position: relative;
+  background-image: url("images/robot.jpg"); /* 👈 image path */
+  background-size: cover;        /* 🔥 PURE SECTION COVER */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 8%;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY (TEXT READABLE) */
+.section-two-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65); /* 🔥 text readable */
+  z-index: 1;
+}
+
+/* CONTENT */
+.section-two-content {
+  position: relative;
+  z-index: 2;
+  max-width: 55%;
+  color: #ffffff;
+}
+
+/* HEADINGS */
+.section-two-content h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.section-two-content h3 {
+  margin-top: 48px;
+  font-size: 26px;
+}
+
+.section-two-content h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+/* TEXT */
+.section-two-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 14px;
+  color: #e6e6e6;
+}
+
+/* LIST */
+.section-two-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 18px;
+}
+
+.section-two-content ul li {
+  margin: 8px 0;
+}
+
+/* ================= MOBILE ================= */
+
+/* ================= SECTION 2 CARDS ================= */
+
+.section-two-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+  max-width: 1100px;
+}
+
+/* INDIVIDUAL CARD */
+.section-card {
+  background: rgba(0, 0, 0, 0.55); /* robot bg visible rahe */
+  border-radius: 18px;
+  padding: 34px 28px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* TITLES */
+.section-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.section-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #cccccc;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.section-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+/* LIST */
+.section-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-card ul li {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #ffffff;
+}
+
+/* ================= MOBILE ================= */
+
+/* ================= OUR PROJECTS DROPDOWN ================= */
+
+.projects-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* main tab */
+.projects-link {
+  font-weight: 700;
+  color: #000000;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* slight lift on hover */
+.projects-dropdown:hover .projects-link {
+  transform: translateY(-2px);
+}
+
+/* dropdown box */
+.projects-dropdown .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #162836;
+  border-radius: 12px;
+  min-width: 180px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* dropdown items */
+.projects-dropdown .dropdown-menu a {
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+/* hover on item */
+.projects-dropdown .dropdown-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* show dropdown */
+.projects-dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* ================= OUR PROJECTS DROPDOWN ================= */
+
+.projects-dropdown {
+  position: relative;
+}
+
+.projects-link {
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+}
+
+/* dropdown box */
+.projects-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff; 
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* dropdown items */
+.projects-menu a {
+  padding: 14px 20px;
+  color:#000000; 
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.projects-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* SHOW ON HOVER (DESKTOP) */
+.projects-dropdown:hover .projects-menu {
+  display: flex;
+}
+
+
+
+/* Hover effect */
+.projects-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* SHOW dropdown on hover (DESKTOP) */
+.projects-dropdown:hover .projects-menu {
+  display: block;
+}
+
+/* ================= OUR PROJECTS DROPDOWN ================= */
+
+.projects-dropdown {
+  position: relative;
+}
+
+.projects-link {
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.25s ease;
+}
+
+.projects-dropdown:hover .projects-link {
+  transform: translateY(-2px);
+}
+
+.projects-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background:  #ffffff; 
+  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* ONLY TEXT UNDERLINE ON HOVER */
+.projects-menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;       /* thoda gap, classy look */
+  background: transparent;          /* ensure no bg */
+}
+.projects-menu a:hover {
+  background: transparent;
+}
+
+/* SHOW underline on hover */
+.projects-menu a:hover::after {
+  width: calc(100% - 40px);
+}
+
+/* SHOW DROPDOWN ON HOVER (DESKTOP) */
+.projects-dropdown:hover .projects-menu {
+  display: block;
+}
+
+/* ================= MOBILE ================= */
+
+
+
+/* ===== SECTION 2 (Founder image) ===== */
+.team-fullscreen {
+  margin: 0;
+    padding-top: 90px;
+  background: #ffffff;
+  height: 100vh;
+}
+
+.team-fullscreen img {
+  width: 100%;
+  height: 78vh;
+  object-fit: contain;   /* image cut nahi hogi */
+  display: block;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .team-section.blue img {
+    height: auto;
+    max-height: calc(100vh - 90px);
+    object-fit: contain;
+  }
+
+  .team-fullscreen img {
+    height: auto;
+    max-height: 90vh;
+  }
+}
+
+
+
+
+/* ===== FLAGSHIP CARDS GAP FIX (FINAL) ===== */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;              /* 🔥 controlled gap */
+  max-width: 1100px;     /* 🔥 container width limit */
+  margin: 40px auto 0;   /* 🔥 center alignment */
+}
+
+/* REMOVE AUTO MARGIN CAUSING EXTRA GAP */
+.flagship-card {
+  margin: 0;             /* 🔥 IMPORTANT FIX */
+  max-width: 420px;
+  width: 100%;
+}
+/* ===== FOOTER SOCIAL ICONS FIX ===== */
+
+.social-links a {
+  text-decoration: none !important;
+  position: relative;
+}
+
+.social-links a::after {
+  content: none !important;   /* 🔥 blue dots remove */
+}
+
+.social-links img {
+  display: inline-block;
+  vertical-align: middle;
+}
+#dashboard h1,
+#dashboard h2,
+#dashboard h3,
+#dashboard p,
+#dashboard b,
+#dashboard small {
+  color: #000000 !important;
+}
+/* ================= ADMIN PAGE – FORCE ALL TEXT BLACK ================= */
+
+/* Admin dashboard + login section */
+#loginSection,
+#dashboard,
+#loginSection *,
+#dashboard * {
+  color: #000000 !important;
+}
+
+/* Inputs text */
+#loginSection input,
+#dashboard input,
+#dashboard textarea,
+#dashboard select {
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+/* Labels */
+#loginSection label,
+#dashboard label {
+  color: #000000 !important;
+}
+
+/* Messages / cards background */
+#dashboard > div,
+#messages div {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Fix small text (date etc.) */
+#dashboard small {
+  color: #eae8e8 !important;
+}
+
+/* Buttons text (except logout/delete if you want white) */
+#dashboard button,
+#loginSection button {
+  color: #fffdfd !important;
+}
+/* ===== ADMIN DELETE BUTTON FIX ===== */
+#messages button {
+  background: red !important;
+  color: white !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* ================= ADMIN DELETE BUTTON – FINAL FORCE FIX ================= */
+
+/* Force delete button visible */
+#messages button {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  background-color: #e53935 !important; /* red */
+  color: #ffffff !important;
+
+  border: none !important;
+  padding: 8px 14px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+/* Hover effect */
+#messages button:hover {
+  background-color: #c62828 !important;
+}
+
+/* ================= MOBILE NAV FIX ================= */
+
+/* hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* mobile drawer hidden */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer a,
+.mobile-projects-toggle {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-projects {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-projects.open {
+  display: block;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+
+  /* hide desktop nav */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: block !important;
+  }
+}
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .team-section.blue img {
+    height: auto;
+    max-height: calc(100vh - 90px);
+    object-fit: contain;
+  }
+
+  .team-fullscreen img {
+    height: auto;
+    max-height: 90vh;
+  }
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* MOBILE DRAWER */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer a,
+.mobile-projects-toggle {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-projects {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-projects.open {
+  display: block;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* ================= MOBILE NAV FIX ================= */
+
+/* hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* mobile drawer hidden */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer a,
+.mobile-projects-toggle {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-projects {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-projects.open {
+  display: block;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+
+  /* hide desktop nav */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: block !important;
+  }
+}
+
+/* ================= OUR PROJECTS DROPDOWN (WHITE – FINAL STABLE) ================= */
+
+.projects-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* main nav text */
+.projects-link {
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  padding: 6px 0;
+  display: inline-block;
+  outline: none;
+}
+
+/* dropdown box */
+.projects-menu {
+  position: absolute;
+  top: 100%;                 /* no hover gap */
+  left: 0;
+  background: #ffffff;       /* WHITE dropdown */
+  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* dropdown links */
+.projects-menu a {
+  padding: 14px 20px;
+  color: #162836;            /* dark text */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+}
+
+/* hover effect on items */
+.projects-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* SHOW DROPDOWN (desktop hover + mobile tap + keyboard) */
+.projects-dropdown:hover .projects-menu,
+.projects-dropdown:focus-within .projects-menu {
+  display: block;
+}
+
+/* link hover/focus style (no movement = stable) */
+.projects-dropdown:hover .projects-link,
+.projects-dropdown:focus-within .projects-link {
+  color: #162836;
+}
+
+/* invisible hover bridge (extra safety) */
+.projects-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+.delete-btn {
+  margin-top: 12px;
+}
+
+
+/* Force delete button visible – COMPACT */
+#messages button {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  background-color: #e53935 !important;
+  color: #ffffff !important;
+
+  border: none !important;
+  padding: 6px 10px !important;   /* 🔥 padding kam */
+  border-radius: 6px !important;
+  font-weight: 600 !important;    /* thoda light */
+  font-size: 13px !important;     /* thoda chhota */
+  cursor: pointer !important;
+  width: auto !important;         /* 🔥 full width remove */
+}
+
+/* Hover effect */
+#messages button:hover {
+  background-color: #c62828 !important;
+}
+
+
+
+/*newwwwwwwww 2:59*/
+/* Navbar main container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;        /* equal spacing */
+}
+
+/* Fix anchor + dropdown alignment */
+.nav-links a,
+.projects-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+}
+
+/* Dropdown wrapper inline */
+.projects-dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Dropdown menu */
+.projects-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.projects-dropdown:hover .projects-menu {
+  display: flex;
+}
+
+/* Logo alignment */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 48px;
+}

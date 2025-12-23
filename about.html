@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UWO | About</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="nav-logo" onclick="window.location.href='index.html'">
+      <img src="images/logo.png" alt="UWO Logo">
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav-links">
+
+      <a href="index.html" target="_blank">Home</a>
+      <a href="about.html" target="_blank">About UWO</a>
+
+      <!-- OUR PROJECTS (DROPDOWN ONLY, NO PAGE) -->
+        <div class="projects-dropdown">
+        <span class="projects-link">Our Projects ▾</span>
+
+        <div class="projects-menu">
+          <a href="https://ai-mall.in" target="_blank">AI Mall</a>
+          <a href="https://efv-website-link.com" target="_blank">EFV</a>
+        </div>
+
+        <div class="dropdown-menu">
+          <a href="https://ai-mall.in" target="_blank">AI Mall</a>
+          <a href="https://efv-website-link.com" target="_blank">EFV</a>
+        </div>
+      </div>
+
+      <a href="our-team.html" target="_blank">Our Team</a>
+      <a href="contact.html" target="_blank">Contact</a>
+
+    </nav>
+
+    <!-- MOBILE ICON -->
+    <div class="hamburger" onclick="toggleDrawer()">☰</div>
+  </div>
+</header>
+
+<!-- ================= MOBILE DRAWER ================= -->
+<div id="mobileDrawer" class="mobile-drawer">
+
+  <a href="index.html">Home</a>
+  <a href="about.html">About UWO</a>
+
+  <!-- MOBILE PROJECTS -->
+  <span class="mobile-projects-toggle" onclick="toggleMobileProjects()">
+    Our Projects ▾
+  </span>
+
+  <div id="mobileProjects" class="mobile-projects">
+    <a href="https://ai-mall.in" target="_blank">AI Mall</a>
+    <a href="https://efv-website-link.com" target="_blank">EFV</a>
+  </div>
+
+  <a href="our-team.html" target="_blank">Our Team</a>
+  <a href="contact.html">Contact</a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero about-hero" style="background-image:url('images/about-bg.jpg');">
+  <div class="hero-content">
+    <h1>About UWO</h1>
+
+    <p>
+      Unified Web Options & Services (UWO) is an AI-first global technology
+      company focused on building scalable, intelligent digital platforms.
+      We serve enterprises, creators, developers, and future-facing ecosystems
+      by designing systems that prioritize intelligence, clarity, and long-term
+      architectural thinking.
+    </p>
+  </div>
+</section>
+
+<!-- ================= WHO WE ARE ================= -->
+<section class="section dark">
+  <div class="section-content">
+    <h2>Who We Are</h2>
+
+    <p>
+      Unified Web Options & Services (UWO) operates at the intersection of
+      engineering, research, and applied intelligence. Our work focuses on
+      building foundational technology — not short-term tools — by embedding
+      intelligence into system architecture and research-led innovation.
+    </p>
+  </div>
+</section>
+
+<!-- ================= VISION & MISSION ================= -->
+<section class="section flagship-white">
+  <div class="section-content">
+    <h2>Vision & Mission</h2>
+
+    <div class="vision-mission-wrapper">
+
+      <!-- VISION CARD -->
+      <div class="vm-card">
+        <img src="images/vision.png" alt="Vision Icon">
+
+        <h3>Our Vision</h3>
+
+        <p>
+          To become a globally trusted technology company shaping the future of
+          intelligent digital systems.
+        </p>
+      </div>
+
+      <!-- MISSION CARD -->
+      <div class="vm-card">
+        <img src="images/mission.png" alt="Mission Icon">
+
+        <h3>Our Mission</h3>
+
+        <p>
+          To design AI platforms and intelligence frameworks that are powerful,
+          ethical, and human-centric — enabling meaningful impact across
+          industries and societies.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================= APPROACH ================= -->
+<section class="section dark">
+  <div class="section-content">
+    <h2>Our Engineering Philosophy</h2>
+
+    <p>
+      Our work is guided by a clear set of principles that prioritize
+      sustainability over speed and systems over fragmented tools.
+    </p>
+
+    <p>
+      • Systems over tools — We build foundations, not fragments<br>
+      • Clarity over complexity — Intelligence should simplify, not confuse<br>
+      • Intelligence as infrastructure — AI embedded at the core<br>
+      • Long-term architecture thinking — Platforms designed for decades
+    </p>
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="section flagship-white">
+  <div class="section-content">
+    <h2>Our Core Values</h2>
+
+    <p>
+      • Innovation with responsibility<br>
+      • Global mindset & inclusivity<br>
+      • Research-led development<br>
+      • Transparency & long-term trust
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+    <p>Unified Web Options & Services Pvt. Ltd.</p>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/uwo-business/" target="_blank">
+        <img src="images/linkedin.jpg" alt="LinkedIn">
+      </a>
+
+      <a href="https://x.com/uwo_business" target="_blank">
+         <img src="images/twitter.png" alt="Twitter">
+      </a>
+
+      <a href="https://www.instagram.com/uwo_business/" target="_blank">
+        <img src="images/instagram-logo-transparent-background-2.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com" target="_blank">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/channel/UC_YQo0Y8bX54gsl8k4D9jvA" target="_blank">
+        <img src="images/youtube.png" alt="YouTube">
+      </a>
+    </div>
+  </footer>
+
+
+</body>
+</html>

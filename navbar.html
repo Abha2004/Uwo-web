@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="style.css">
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="nav-logo" onclick="window.open('index.html','_blank')">
+      <img src="images/logo.png" alt="UWO Logo">
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav-links">
+      <a href="index.html" target="_blank">Home</a>
+      <a href="about.html" target="_blank">About UWO</a>
+
+      <!-- OUR PROJECTS DROPDOWN -->
+  <div class="projects-dropdown">
+     <span class="projects-link">Our Projects ▾</span>
+        <div class="projects-menu">
+          <a href="https://ai-mall.in" target="_blank">AI Mall</a>
+          <a href="https://efv-website-link.com" target="_blank">EFV</a>
+        </div>
+      </div>
+
+      <a href="our-team.html" target="_blank">Our Team</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </nav>
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" onclick="toggleDrawer()">☰</div>
+
+  </div>
+</header>
+
+<!-- ================= MOBILE DRAWER ================= -->
+<div id="mobileDrawer" class="mobile-drawer">
+
+  <a href="index.html" target="_blank">Home</a>
+  <a href="about.html" target="_blank">About UWO</a>
+
+  <div class="mobile-projects-toggle" onclick="toggleMobileProjects()">
+    Our Projects ▾
+  </div>
+
+  <div id="mobileProjects" class="mobile-projects">
+    <a href="https://ai-mall.in" target="_blank">AI Mall</a>
+    <a href="https://efv-website-link.com" target="_blank">EFV</a>
+  </div>
+
+  <a href="our-team.html" target="_blank">Our Team</a>
+  <a href="contact.html" target="_blank">Contact</a>
+</div>
+
+<script>
+  function toggleDrawer() {
+    document.getElementById("mobileDrawer").classList.toggle("open");
+  }
+
+  function toggleMobileProjects() {
+    document.getElementById("mobileProjects").classList.toggle("open");
+  }
+</script>
+
+
+navbar.html

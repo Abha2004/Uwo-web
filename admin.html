@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UWO | Admin</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Supabase v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- ADMIN JS ONLY -->
+  <script src="admin.js" defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      /* background: url('images/admin-bg.png') center/cover fixed; */
+      background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),   /* 👈 opacity yahin control hogi */
+    rgba(0, 0, 0, 0.2)
+  ),
+  url('images/admin-bg.png') center/cover fixed;
+      
+      font-family: 'Inter', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(245, 243, 243, 0.95);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      text-align: center;
+      color: #111;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #000;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #000;
+      color: #fff !important;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.25s ease;
+    }
+
+    button:hover {
+      background: #222;
+    }
+
+    /* ================= DASHBOARD ================= */
+
+    #dashboard {
+      display: none;
+      max-width: 900px;
+    }
+
+    /* 🔥 CHANGE ONLY HERE */
+    #messages {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    /* 🔥 BLACK CARD + WHITE TEXT */
+    .data-card {
+      background: #000;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.4);
+      border-left: 5px solid #fff;
+      font-size: 14px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .data-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.55);
+    }
+
+    .data-card p {
+      margin: 6px 0;
+      color: #fff;
+    }
+
+    .data-card strong {
+      color: #f5f5f5;
+    }
+
+    .logout-btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGIN -->
+  <section id="loginSection">
+    <h2>Admin Login</h2>
+
+    <label>Email</label>
+    <input id="email" type="email" value="admin@uwo.com">
+
+    <label>Password</label>
+    <input id="password" type="password">
+
+    <button onclick="login()">Login</button>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard">
+    <h2>Admin Dashboard</h2>
+
+    <div id="messages">
+      <!-- Cards yahan JS se insert honge -->
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </section>
+
+</body>
+</html>
