@@ -352,7 +352,7 @@ select:focus {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url('images/home_bg.jpg');
+  background-image: url('images/home_bg..webp');
   /* Restore Dark Background */
   /* Apply background image first */
   background-size: cover;
