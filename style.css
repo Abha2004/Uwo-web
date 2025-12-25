@@ -1366,4 +1366,18 @@ select:focus {
   [data-aos] {
     transition-duration: 600ms !important;
   }
+
+  .flagship-white .features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flagship-white .feature-card {
+    margin-bottom: 20px;
+  }
+
+  .trust-section {
+    display: none;
+  }
 }
