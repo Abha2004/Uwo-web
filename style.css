@@ -1380,4 +1380,18 @@ select:focus {
   .trust-section {
     display: none;
   }
+
+  .section-gold {
+    display: none;
+  }
+
+  .features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    cursor: pointer;
+  }
 }
