@@ -108,67 +108,58 @@ ul {
 
 .btn {
   display: inline-block;
-  padding: 14px 32px;
-  border-radius: 50px;
+  padding: 14px 28px;
+  border-radius: 40px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.22s cubic-bezier(0.2,0.8,0.2,1),
+              filter 0.18s ease,
+              box-shadow 0.22s ease;
   position: relative;
-  overflow: hidden;
-  letter-spacing: 0.5px;
+  overflow: visible;
+  letter-spacing: 0.4px;
+  background-clip: padding-box;
 }
 
 .btn-primary {
   background: var(--gradient-main);
   color: #000;
-  /* Black text on Gold looks premium */
-  box-shadow: 0 4px 20px var(--primary-glow);
+  border: none;
+  outline: none;
+  box-shadow: 0 6px 18px rgba(214,165,89,0.08);
 }
 
-.btn-primary:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 30px var(--primary-glow);
-  filter: brightness(1.1);
+/* subtle pop on hover */
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.03);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--primary);
-  /* Gold border */
+  border: none;
   color: var(--primary);
-}
-
-.btn-outline:hover {
-  background: rgba(214, 165, 89, 0.1);
-  box-shadow: 0 0 15px rgba(214, 165, 89, 0.2);
-  border-color: var(--primary);
-}
-
-.btn:active {
-  transform: scale(0.95);
 }
 
 .btn-glow {
   background: var(--gradient-main) !important;
   color: #000 !important;
-  box-shadow: 0 0 15px var(--primary-glow);
-  border: none;
-  animation: pulse-glow 2s infinite;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(214,165,89,0.08) !important;
+  animation: none !important;
 }
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 10px var(--primary-glow);
-  }
-
-  50% {
-    box-shadow: 0 0 25px var(--primary), 0 0 40px var(--primary-glow);
-  }
-
-  100% {
-    box-shadow: 0 0 10px var(--primary-glow);
-  }
-}
+/* Remove strong glow keyframes if present */
+@keyframes pulse-glow { from { box-shadow: none; } to { box-shadow: none; } }
 
 /* Contact Form Inputs */
 input,
@@ -702,7 +693,7 @@ select:focus {
 .footer p {
   color: var(--text-muted);
   margin-bottom: 24px;
-  animation: fadeIn 1s ease-out 0.2s both;
+  animation: fadeIn 2.5s ease-out 0.5s both;
 }
 
 .social-links {
@@ -1014,14 +1005,13 @@ select:focus {
 
 /* Fade In Up */
 @keyframes fadeInUp {
-  from {
-    transform: translateY(50px);
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-
-  to {
-    transform: translateY(0);
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1164,7 +1154,7 @@ select:focus {
 
 /* Enhanced Button Hover with Multiple Effects */
 .btn:hover {
-  animation: heartBeat 0.8s ease-in-out;
+  animation: heartBeat 01s ease-in-out;
 }
 
 /* Feature Cards Advanced Hover */
@@ -1433,4 +1423,25 @@ select:focus {
   .footer {
     cursor: default;
   }
+}
+
+/* ================= BUTTON BORDER OVERRIDES ================= */
+/* Remove borders/outlines from all buttons and CTA links globally */
+.btn,
+.btn-primary,
+.btn-outline,
+.btn-glow,
+button,
+a.btn,
+.project-card a,
+.feature-card a {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Also remove any focus rings that appear as borders */
+.btn:focus,
+button:focus,
+a.btn:focus {
+  box-shadow: none !important;
 }
