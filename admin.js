@@ -47,10 +47,13 @@ async function showDashboard() {
     const card = document.createElement("div");
     card.className = "data-card";
 
+    const date = new Date(m.created_at).toLocaleString();
+
     card.innerHTML = `
       <p><strong>Name:</strong> ${m.name}</p>
       <p><strong>Email:</strong> ${m.email}</p>
       <p><strong>Message:</strong> ${m.message}</p>
+      <p><strong>Date & Time:</strong> ${date}</p>
 
       <button class="delete-btn" onclick="deleteMessage('${m.id}')">
         Delete
