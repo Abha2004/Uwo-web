@@ -203,9 +203,7 @@ select:focus {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
+  background: #ffffff; /* Set navbar color to pure white */
   border-bottom: var(--glass-border);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -228,6 +226,7 @@ select:focus {
   /* Enlarge logo to match navbar height */
   cursor: pointer;
   transition: transform 0.3s ease;
+  animation: none;
 }
 
 .nav-logo img:hover {
@@ -1115,7 +1114,7 @@ select:focus {
 
 /* Logo Animation */
 .nav-logo img {
-  animation: rotateIn 1s ease-out;
+  animation: none;
 }
 
 /* Nav Links Stagger */
@@ -1152,9 +1151,28 @@ select:focus {
   animation: fadeInUp 1s ease-out 0.7s both;
 }
 
+/* Unified animation speed for all buttons and CTA links */
+.btn,
+.btn-primary,
+.btn-outline,
+.btn-glow,
+button,
+a.btn {
+  animation: heartBeat 2s ease-in-out; /* Unified animation duration */
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-glow:hover,
+button:hover,
+a.btn:hover {
+  animation: heartBeat 2s ease-in-out; /* Unified hover animation */
+}
+
 /* Enhanced Button Hover with Multiple Effects */
 .btn:hover {
-  animation: heartBeat 01s ease-in-out;
+  animation: heartBeat 2s ease-in-out;
 }
 
 /* Feature Cards Advanced Hover */
