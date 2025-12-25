@@ -1392,6 +1392,6 @@ select:focus {
   }
 
   .footer {
-    cursor: pointer;
+    cursor: default;
   }
 }
