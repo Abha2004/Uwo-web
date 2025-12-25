@@ -155,11 +155,11 @@ ul {
   color: #000 !important;
   border: none !important;
   box-shadow: 0 8px 24px rgba(214,165,89,0.08) !important;
-  animation: none !important;
+  /* animation:  !important; */
 }
 
 /* Remove strong glow keyframes if present */
-@keyframes pulse-glow { from { box-shadow: none; } to { box-shadow: none; } }
+/* @keyframes pulse-glow { from { box-shadow: none; } to { box-shadow: none; } } */
 
 /* Contact Form Inputs */
 input,
@@ -1457,9 +1457,4 @@ a.btn,
   outline: none !important;
 }
 
-/* Also remove any focus rings that appear as borders */
-.btn:focus,
-button:focus,
-a.btn:focus {
-  box-shadow: none !important;
-}
+
