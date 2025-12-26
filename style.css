@@ -179,8 +179,8 @@ select {
   padding: 12px;
   margin-bottom: 20px;
   border-radius: 8px;
-  border: 2.5px solid var(--primary) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--primary) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
   color: #000 !important;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -190,7 +190,7 @@ select {
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 700;
+  font-weight: bold;
   color: #000;
 }
 
@@ -198,7 +198,7 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--primary) !important;
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
   outline: none;
   box-shadow: 0 0 15px rgba(214, 165, 89, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -622,7 +622,7 @@ select:focus {
   object-fit: contain;
   mix-blend-mode: multiply !important;
   background: transparent !important;
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   display: block;
   /* Ensure it behaves as a block in the flex container */
 }
