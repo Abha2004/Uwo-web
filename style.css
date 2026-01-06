@@ -176,29 +176,30 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--primary) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 165, 89, 0.3) !important;
+  background: #f8f8f8 !important;
   color: #000 !important;
   font-family: inherit;
   transition: all 0.3s ease;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: 700;
   color: #000;
+  font-size: 1.1rem;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--primary) !important;
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: #ffffff !important;
   outline: none;
   box-shadow: 0 0 15px rgba(214, 165, 89, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -367,17 +368,21 @@ select:focus {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
-  background-image: url('images/home_bg..webp');
-  /* Restore Dark Background */
-  /* Apply background image first */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  /* Parallax effect */
   padding-top: 80px;
+  padding-left: 80px;
   overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero::before {
@@ -392,13 +397,24 @@ select:focus {
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   max-width: 900px;
   padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 24px;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.1;
   font-weight: 800;
   margin-bottom: 24px;
@@ -410,14 +426,46 @@ select:focus {
   color: var(--text-muted);
   margin-bottom: 40px;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-cta-wrapper {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+/* ================= CENTERED HERO ================= */
+.hero-centered {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-content-centered {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.hero-content-centered h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.hero-content-centered p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ================= SECTION COMMON ================= */
@@ -428,8 +476,8 @@ select:focus {
 
 /* ================= GOLDEN SECTION (New) ================= */
 .section-gold {
-  background: linear-gradient(135deg, #fdfbf7 0%, #e2d1c3 100%);
-  /* Subtle Premium Gold/Beige */
+  background: #f7efd7;
+  /* Warmer Golden shade as requested */
   position: relative;
 }
 
@@ -449,7 +497,16 @@ select:focus {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  /* Slightly increased margin */
+}
+
+.section-title-left {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #000 !important;
 }
 
 .section-subtitle {

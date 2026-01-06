@@ -63,8 +63,9 @@
   </div>
 
   <!-- ================= HERO ================= -->
-  <section class="hero" style="min-height: 50vh; background-image: url('images/contact-bg..webp')">
-    <div class="hero-content" data-aos="fade-up">
+  <section class="hero hero-centered"
+    style="min-height: 75vh; background-image:url('images/contact-hero-user.jpg'); background-size: cover; background-position: center 40%; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 10vh;">
+    <div class="hero-content-centered" data-aos="fade-up">
       <h1>Get in Touch</h1>
       <p>
         Whether you are exploring partnerships, platforms, or opportunities —
@@ -74,34 +75,47 @@
   </section>
 
   <!-- ================= CONTACT FORM ================= -->
-  <section class="section section-gold">
+  <section class="section section-gold"
+    style="border-top: 4px solid var(--primary); border-bottom: 4px solid var(--primary);">
     <div class="container">
-      <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">
-        Contact Form
-      </h2>
+      <div style="max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title-left" data-aos="fade-right">
+          Contact Form
+        </h2>
 
-      <div class="contact-form" style="max-width: 600px; margin: 0 auto" data-aos="fade-up" data-aos-delay="300"
-        data-aos-duration="1000">
-        <label>Full Name</label>
-        <input type="text" id="name" placeholder="Your name" data-aos="fade-right" data-aos-delay="400" />
+        <div class="contact-form" style="max-width: 100%;" data-aos="fade-up" data-aos-delay="300"
+          data-aos-duration="1000">
+          <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+            <div>
+              <label>Full Name</label>
+              <input type="text" id="name" placeholder="Your name" data-aos="fade-up" data-aos-delay="400" />
+            </div>
 
-        <label>Email Address</label>
-        <input type="email" id="email" placeholder="your@email.com" data-aos="fade-right" data-aos-delay="500" />
+            <div>
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="your@email.com" data-aos="fade-up" data-aos-delay="500" />
+            </div>
 
-        <label>Purpose</label>
-        <select id="purpose" data-aos="fade-right" data-aos-delay="600">
-          <option value="Business">Business</option>
-          <option value="Partnership">Partnership</option>
-          <option value="Media">Media</option>
-        </select>
+            <div>
+              <label>Purpose</label>
+              <select id="purpose" data-aos="fade-up" data-aos-delay="600">
+                <option value="Business">Business</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Media">Media</option>
+              </select>
+            </div>
 
-        <label>Message</label>
-        <textarea rows="4" id="message" placeholder="Write your message..." data-aos="fade-right"
-          data-aos-delay="700"></textarea>
+            <div>
+              <label>Message</label>
+              <textarea rows="4" id="message" placeholder="Write your message..." data-aos="fade-up"
+                data-aos-delay="700"></textarea>
+            </div>
+          </div>
 
-        <button type="button" class="btn btn-primary" style="width: 100%" onclick="sendMessage()">
-          Send Message
-        </button>
+          <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="sendMessage()">
+            Send Message
+          </button>
+        </div>
       </div>
     </div>
   </section>
