@@ -1,0 +1,16 @@
+[
+  {
+    "name": "UWOADMIN",
+    "email": "admin@uwodemo.com",
+    "password": "uwo@1234",
+    "role": "admin",
+    "createdAt": "2026-01-06T19:56:00Z"
+  },
+  {
+    "name": "UWOADMIN",
+    "email": "abhajatav18@gmail.com",
+    "password": "18072004",
+    "role": "admin",
+    "createdAt": "2026-01-06T19:56:00Z"
+  }
+]

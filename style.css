@@ -366,6 +366,7 @@ select:focus {
 /* ================= HERO SECTION ================= */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -410,6 +411,15 @@ select:focus {
 
   .hero-content {
     text-align: center;
+  }
+
+  .hero-video {
+    object-position: right center;
+  }
+
+  .hero p {
+    color: #ffffff;
+    font-weight: 600;
   }
 }
 
